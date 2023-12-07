@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -17,7 +17,10 @@
   <header class="page-header">
     <div class="page-header__conteiner">
       <a href="index.html" class="page-header__logo">
-        <img src="assets/images/logo.svg" class="page-header__logo-img">
+        <!-- <img src="picture/img/logo.svg" class="page-header__logo-img"> -->
+        <svg class="page-header__logo-img" width="202" height="147">
+          <use xlink:href="assets/icons/symbols.svg#logo"></use>
+        </svg>
       </a>
       <nav class="page-header__nav">
         <a href="#" class="page-header__nav-link">Мероприятия</a>
@@ -27,94 +30,79 @@
       </nav>
       <a href="#" class="btn page-header__user-btn">Войти</a>
     </div>
+    <main class="main">
+      <div class="events">
+        <div class="events__conteiner">
+          <h2 class="events__title section-title">Мероприятия</h2>
+          <div class="events__list listing">
+            <!-- prettier-ignore -->
+            <article class="event-card  listing__event-card">
+              <a href="#" class="event-card__link">
+                <picture class="event-card__picture">
+                  <img src="assets/images/Nirvana.svg" alt="nirvana" class="event-card__img" />
+                </picture>
+                <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+                <p class="event-card__description">Это третий альбом группы...</p>
+                <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
+              </a>
+            </article>
+            <article class="event-card  listing__event-card">
+              <a href="#" class="event-card__link">
+                <picture class="event-card__picture">
+                  <img src="assets/images/Stuff.png" alt="stuff" class="event-card__img" />
+                </picture>
+                <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                <p class="event-card__description">Один из самых популярных подкастов в мире...</p>
+                <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
+              </a>
+            </article>
+            <article class="event-card  listing__event-card">
+              <a href="#" class="event-card__link">
+                <picture class="event-card__picture">
+                  <img src="assets/images/Stuff.png" alt="stuff" class="event-card__img" />
+                </picture>
+                <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                <p class="event-card__description">Один из самых популярных подкастов в мире...</p>
+                <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
+              </a>
+            </article>
+            <article class="event-card  listing__event-card">
+              <a href="#" class="event-card__link">
+                <picture class="event-card__picture">
+                  <img src="assets/images/Stuff.png" alt="stuff" class="event-card__img" />
+                </picture>
+                <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                <p class="event-card__description">Один из самых популярных подкастов в мире...</p>
+                <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
+              </a>
+            </article>
+            <article class="event-card  listing__event-card">
+              <a href="#" class="event-card__link">
+                <picture class="event-card__picture">
+                  <img src="assets/images/Stuff.png" alt="stuff" class="event-card__img" />
+                </picture>
+                <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                <p class="event-card__description">Один из самых популярных подкастов в мире...</p>
+                <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
+              </a>
+            </article>
+            <article class="event-card  listing__event-card">
+              <a href="#" class="event-card__link">
+                <picture class="event-card__picture">
+                  <img src="assets/images/Stuff.png" alt="stuff" class="event-card__img" />
+                </picture>
+                <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                <p class="event-card__description">Один из самых популярных подкастов в мире...</p>
+                <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
+              </a>
+            </article>
 
-  </header>
-  <main class="main">
-    <div class="events">
-      <div class="events__conteiner">
-        <h2 class="events__title title">Мероприятия</h2>
-        <div class="events__list listing">
-          <article class="listing__card-event card-event">
-            <a href="#" class="card-event__link">
-              <picture class="card-event__picture">
-                <img src="assets/images/Nirvana.svg" class="card-event__picture-img" alt="img">
-              </picture>
-              <h3 class="card-event__title">
-                Собираемся и слушаем альбом Nirvana. Nirvana
-              </h3>
-              <p class="card-event__text">
-                Это третий альбом группы, выпущенный после смерти .
-              </p>
-              <time datetime="2022-12-07T18:00" class="card-event__time">07.12.2022 | начало 18.00</time>
-            </a>
-          </article>
-
-          <article class="listing__card-event card-event">
-            <a href="" class="card-event__link">
-              <picture class="card-event__picture">
-                <img src="assets/images/Nirvana.svg" class="card-event__picture-img" alt="img">
-              </picture>
-              <h3 class="card-event__title">
-                Собираемся и слушаем альбом Nirvana. Nirvana
-              </h3>
-              <p class="card-event__text">
-                Это третий альбом группы.
-              </p>
-              <time datetime="2022-12-07T18:00" class="card-event__time">07.12.2022 | начало 18.00</time>
-            </a>
-          </article>
-
-          <article class="listing__card-event card-event">
-            <a href="" class="card-event__link">
-              <picture class="card-event__picture">
-                <img src="assets/images/Nirvana.svg" class="card-event__picture-img" alt="img">
-              </picture>
-              <h3 class="card-event__title">
-                Собираемся и слушаем альбом Nirvana. Nirvana
-              </h3>
-              <p class="card-event__text">
-                Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.
-              </p>
-              <time datetime="2022-12-07T18:00" class="card-event__time">07.12.2022 | начало 18.00</time>
-            </a>
-          </article>
-
-          <article class="listing__card-event card-event">
-            <a href="#" class="card-event__link">
-              <picture class="card-event__picture">
-                <img src="assets/images/Nirvana.svg" class="card-event__picture-img" alt="img">
-              </picture>
-              <h3 class="card-event__title">
-                Собираемся и слушаем альбом Nirvana. Nirvana
-              </h3>
-              <p class="card-event__text">
-                Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.
-              </p>
-              <time datetime="2022-12-07T18:00" class="card-event__time">07.12.2022 | начало 18.00</time>
-            </a>
-          </article>
-
-          <article class="listing__card-event card-event">
-            <a href="#" class="card-event__link">
-              <picture class="card-event__picture">
-                <img src="assets/images/Nirvana.svg" class="card-event__picture-img" alt="img">
-              </picture>
-              <h3 class="card-event__title">
-                Собираемся и слушаем альбом Nirvana. Nirvana
-              </h3>
-              <p class="card-event__text">
-                Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.
-              </p>
-              <time datetime="2022-12-07T18:00" class="card-event__time">07.12.2022 | начало 18.00</time>
-            </a>
-          </article>
-
+          </div>
         </div>
       </div>
-    </div>
 
-  </main>
-  <footer class="page-footer"></footer>
+    </main>
+    <footer class="page-footer"></footer>
 
 </body>
 
