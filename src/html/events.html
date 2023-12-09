@@ -6,10 +6,10 @@
     @@include('blocks/page-header.html')
     <main class="main">
       <div class="events">
-        <div class="events__conteiner">
-          <h2 class="events__title section-title">Мероприятия</h2>
-          <div class="events__list listing">
-            <!-- prettier-ignore -->
+        <section class="listing events__listing">
+          <h2 class="listing__title section-title">Мероприятия</h2>
+          <div class="listing__event-list">
+            <!--prettier-ignore-->
             @@loop('blocks/event-card.html', [
             {
               "class": "listing__event-card",
@@ -68,7 +68,7 @@
           ])
 
           </div>
-        </div>
+        </section>
       </div>
       
     </main>
