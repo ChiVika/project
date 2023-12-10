@@ -17,15 +17,15 @@
             }
         }
         &:hover .event-card__title{
-            @media (hover: hover){
+            @media(hover: hover){
                 color: @red;
                 text-decoration-color: @red;
             }
         }
     }
     &__title{
-        color: #A51505;
-	    text-decoration-color: #A51505;
+        color: @red;
+	    text-decoration-color: @red;
     }
     &__picture{
         position: relative;
@@ -36,11 +36,13 @@
         text-decoration: none;
         overflow: hidden;
     }
-    &__picture::after{
-        content: "";
-        display: block;
-        width: 100%;
-        padding-top: 107.16%;
+    &__picture{
+        &::after{
+            content: "";
+            display: block;
+            width: 100%;
+            //padding-top: 17.16%;
+        }
     }
     &__picture-img{
         position: absolute;
@@ -60,7 +62,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        color: #1F1E1E;
+        color: @black;
         transition: color 0.2s, text_decoration-color 0.23s;
     }
     &__text{
@@ -69,7 +71,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        color: #1F1E1E;
+        color: @black;
     }
     &__time{
         margin-top: auto;
@@ -78,6 +80,6 @@
         font-style: normal;
         font-weight: 300;
         line-height: normal;
-        color: #1F1E1E;
+        color: @black;
     }
 }
