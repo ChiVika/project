@@ -151,7 +151,7 @@ button {
   width: 100%;
 }
 .event-card__link:active .event-card__title {
-  color: #bc3324;
+  color: #1F1E1E;
   text-decoration-color: #bc3324;
 }
 .event-card__title {
@@ -305,6 +305,80 @@ button {
   width: calc(33.3333% - 60px);
   margin: 0 30px 120px;
 }
+.pp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 50px 50px 50px;
+  overflow-y: auto;
+  z-index: 110;
+  background-color: #dedede;
+}
+@supports ((-webkit-backdrop-filter: blur(25px)) or (backdrop-filter: blur(25px))) {
+  .pp {
+    background-color: rgba(31, 30, 30, 0.4);
+    -webkit-backdrop-filter: blur(25px);
+            backdrop-filter: blur(25px);
+  }
+}
+.pp__conteiner {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 1210px;
+  width: 100%;
+  background-color: #dedede;
+  background-image: url(../assets/images/noise.png);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto;
+  margin: auto;
+}
+.pp__title {
+  margin: -40px 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #1F1E1E;
+  text-transform: uppercase;
+  font-size: 22px;
+  max-width: 595px;
+  letter-spacing: 0.44px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 400;
+}
+.pp__sticky-close {
+  position: sticky;
+  top: 0;
+}
+.pp__sticky-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  height: 60px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: #1F1E1E;
+  color: #ffffff;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
 .events {
   padding: 140px 0 180px;
 }
@@ -319,5 +393,8 @@ button {
   .event-card__link:hover .event-card__title {
     color: #bc3324;
     text-decoration-color: #bc3324;
+  }
+  .pp__sticky-btn:hover {
+    background-color: #a51505;
   }
 }
