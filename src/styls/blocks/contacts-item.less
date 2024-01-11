@@ -1,0 +1,40 @@
+.contacts-item{
+    display: flex;
+    gap: 54px;
+    align-items: center;
+    &__img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 110px;
+        height: 110px;
+        background-color: @black;
+        color: @red;
+    }
+    &__title{
+        margin: 0 0 10px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: normal;
+        color: @black;
+
+    }
+    &__info{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: normal;
+        color: @black;
+        &[href] {
+            transition: color 0.2s;
+            text-decoration: none;
+            &:hover{
+                @media (hover: hover){
+                    color: @red;
+                }
+            }
+            &:active{
+                color: @red
+            }
+        }
+    }
+}

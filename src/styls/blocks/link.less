@@ -1,0 +1,23 @@
+.link{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    height: 0;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+    color: @black;
+    &:hover{
+        @media (hover: hover){
+            color: @red;
+        }
+    }
+    &:active{
+        color: @red;
+    }
+    &__name,
+    &__icon{
+        cursor: pointer;
+    }
+}
