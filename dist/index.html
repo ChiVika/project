@@ -39,12 +39,20 @@
         <picture class="main-header__picture">
           <img src="assets/images/lenni.svg" class="main-header__img">
         </picture>
-        <p class="main-header__text">
-          для людей, горящих сердцем и делом
-          место для настоящего
-        </p>
+        <div class="main-header__container">
+          <p class="main-header__text">
+            для людей, горящих сердцем и делом
+            место для настоящего
+          </p>
+        </div>
       </header>
-      <section class="offers home__offers"> </section>
+      <section class="offers home__offers">
+        <div class="offers__container">
+          <p class="offers__text">Я хочу:</p>
+          <button type="submit" class="offers__button1 btn2">Провести мероприятие</button>
+          <button type="submit" class="offers__button2 btn2">Стать арендатором</button>
+        </div>
+      </section>
       <section class="about home__about">
         <div class="about__container">
           <h2 class="about__section-title section-title">О нас</h2>
@@ -88,7 +96,70 @@
         </div>
       </section>
       <section class="near-events home__near-events"></section>
-      <section class="blog home__blog"></section>
+      <section class="listing home__listing">
+        <h2 class="listing__title section-title">Блог</h2>
+        <div class="listing__article-list">
+          <!-- prettier-ignore -->
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <img src="assets/images/theatre.jpg" alt="Theatre Photosession" class="article-card__img" />
+              </picture>
+            </a>
+            <div class="article-card__info">
+              <time datetime="2021-11-26T00:00" class="article-card__time">26.11.2021</time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
+                <div class="article-card__arrow arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </div>
+              </a>
+              <p class="article-card__description">Организовывая фотосессию для...</p>
+            </div>
+          </article>
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <img src="assets/images/theatre.jpg" alt="Theatre Photosession" class="article-card__img" />
+              </picture>
+            </a>
+            <div class="article-card__info">
+              <time datetime="2021-11-26T00:00" class="article-card__time">26.11.2021</time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
+                <div class="article-card__arrow arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </div>
+              </a>
+              <p class="article-card__description">Организовывая фотосессию для...</p>
+            </div>
+          </article>
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <img src="assets/images/theatre.jpg" alt="Theatre Photosession" class="article-card__img" />
+              </picture>
+            </a>
+            <div class="article-card__info">
+              <time datetime="2021-11-26T00:00" class="article-card__time">26.11.2021</time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
+                <div class="article-card__arrow arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </div>
+              </a>
+              <p class="article-card__description">Организовывая фотосессию для...</p>
+            </div>
+          </article>
+        </div>
+        <a href="#" class="listing__link link">Смотреть все</a>
+      </section>
       <section class="contacts home__contacts">
         <div class="contacts__container">
           <h2 class="contacts__title section-title">контакты</h2>
@@ -120,8 +191,8 @@
                 </div>
                 <div class="contacts-item__content">
                   <h4 class="contacts-item__title">Отдел аренды</h4>
-                  <a href="tel:/499 350 0730/" class="contacts-item__info">+7 499 350 0730</p>
-                    <a href="mailto:hi@tagree.ru" class="contacts-item__info">hi@tagree.ru</p>
+                  <a href="tel:/8 499 350 0730/" class="contacts-item__info">+7 499 350 0730</a>
+                  <a href="mailto:hi@tagree.ru" class="contacts-item__info">hi@tagree.ru</a>
                 </div>
 
               </div>
@@ -137,8 +208,8 @@
                 </div>
                 <div class="contacts-item__content">
                   <h4 class="contacts-item__title">Отдел мероприятий</h4>
-                  <a href="tel:/499 350 0730/" class="contacts-item__info">+7 499 350 0730</p>
-                    <a href="mailto:hi@tagree.ru" class="contacts-item__info">hi@tagree.ru</p>
+                  <a href="tel:/8 499 350 0730/" class="contacts-item__info">+7 499 350 0730</a>
+                  <a href="mailto:hi@tagree.ru" class="contacts-item__info">hi@tagree.ru</a>
                 </div>
 
               </div>
@@ -154,7 +225,32 @@
       <div class="do-it home__do-it"></div>
     </div>
   </main>
-  <footer class="page-footer"></footer>
+  <footer class="page-footer">
+    <div class="page-footer__border"></div>
+    <div class="page-footer__container">
+      <div class="page-footer__wrapper">
+        <nav class="page-footer__nav">
+          <a href="" class="page-footer__nav-link">Календарь мероприятий</a>
+          <a href="" class="page-footer__nav-link">Провести мероприятие</a>
+          <a href="" class="page-footer__nav-link">Стать арендатором</a>
+          <a href="" class="page-footer__nav-link">Наши проекты</a>
+          <a href="" class="page-footer__nav-link">Контакты</a>
+        </nav>
+        <form class="page-footer__form sub">
+          <h4 class="sub__title">Подпишись и будь в курсе происходящего</h4>
+          <div class="sub__wrapper">
+            <input type="email" name="email" placeholder="Email" class="sub__input" required />
+            <button type="submit" class="sub__submit">Подписаться</button>
+          </div>
+          <label class="sub__check check">
+            <input type="checkbox" class="check__input" name="agree" required />
+            <span class="check__mark"></span>
+            <span class="check__label">Согласен на обработку персональных данных</span>
+          </label>
+        </form>
+      </div>
+    </div>
+  </footer>
 
   <div class="pp">
     <div class="pp__conteiner">

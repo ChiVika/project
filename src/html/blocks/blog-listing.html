@@ -1,16 +1,36 @@
-<!DOCTYPE html>
-<html lang="ru">
-  @@include('blocks/head.html')
-  <body class="body">
-    @@include('blocks/page-header.html')
-    <main class="main">
-      <div class="home">
-        <!-- прочая разметка -->
-        <!-- prettier-ignore -->
-        @@include('blocks/blog-listing.html', {"class": "home__listing"})
-        <!-- прочая разметка -->
-      </div>
-    </main>
-    @@include('blocks/page-footer.html')
-  </body>
-</html>
+<section class="listing @@class">
+  <h2 class="listing__title section-title">Блог</h2>
+  <div class="listing__article-list">
+    <!-- prettier-ignore -->
+    @@loop('article-card.html', [
+      {
+        "class": "listing__article-card",
+        "img": "assets/images/theatre.jpg",
+        "alt": "Theatre Photosession",
+        "title": "Фотосессия в стенах Театра драмы",
+        "descr": "Организовывая фотосессию для...",
+        "time": "26.11.2021",
+        "datetime": "2021-11-26T00:00"
+      },
+      {
+        "class": "listing__article-card",
+        "img": "assets/images/theatre.jpg",
+        "alt": "Theatre Photosession",
+        "title": "Фотосессия в стенах Театра драмы",
+        "descr": "Организовывая фотосессию для...",
+        "time": "26.11.2021",
+        "datetime": "2021-11-26T00:00"
+      },
+      {
+        "class": "listing__article-card",
+        "img": "assets/images/theatre.jpg",
+        "alt": "Theatre Photosession",
+        "title": "Фотосессия в стенах Театра драмы",
+        "descr": "Организовывая фотосессию для...",
+        "time": "26.11.2021",
+        "datetime": "2021-11-26T00:00"
+      },
+    ])
+  </div>
+  <a href="#" class="listing__link link">Смотреть все</a>
+</section>

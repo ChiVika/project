@@ -12,15 +12,17 @@
           <picture class="main-header__picture">
             <img src="assets/images/lenni.svg" class="main-header__img">
           </picture>
-          <p class="main-header__text">
-            для людей, горящих сердцем и делом
-            место для настоящего
-          </p>
+          <div class="main-header__container">
+            <p class="main-header__text">
+              для людей, горящих сердцем и делом
+              место для настоящего
+            </p>
+          </div>
         </header>
-        <section class="offers home__offers"> </section>
+        @@include('blocks/offers.html', {class: 'home__offers'})
         @@include('blocks/about.html', {class: 'home__about'})
         <section class="near-events home__near-events"></section>
-        <section class="blog home__blog"></section>
+        @@include('blocks/blog-listing.html', {"class": "home__listing"})
         @@include('blocks/contacts.html', {class: 'home__contacts'})
 
         <div class="do-it home__do-it"></div>

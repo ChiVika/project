@@ -5,6 +5,7 @@
   <body class="body">
     @@include('blocks/page-header.html')
     <main class="main">
+      @@include('blocks/breadcrums.html')
       <div class="events">
         <section class="listing events__listing">
           <h2 class="listing__title section-title">Мероприятия</h2>
@@ -69,6 +70,17 @@
 
           </div>
         </section>
+        <section class="events__services">
+          <h2 class="section-title section-title--text1">дополнительные услуги</h2>
+
+          <p class="events__services-description">Перед запуском проекта, мы подготавливаем 
+            подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены 
+            и мы можем приступать к реализациии проекта, начинается сложная, но интересная 
+            работа, результатом которой 
+            будет проведение вашего мероприятия на высшем уровне.
+          </p>
+        </section>
+        @@include('blocks/table.html')
       </div>
       
     </main>
