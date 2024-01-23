@@ -7,7 +7,7 @@
     <main class="main">
       @@include('blocks/breadcrums.html')
       <div class="events">
-        <section class="listing events__listing">
+        <section class="listing events__listing events__listing">
           <h2 class="listing__title section-title">Мероприятия</h2>
           <div class="listing__events-list">
             <!--prettier-ignore-->
@@ -70,6 +70,14 @@
 
           </div>
         </section>
+        <section class="more-information">
+          <span class="more-information__text"> Показать еще</span>
+          <div class="more-information__img">
+            <svg class="link__icon">
+              <use xlink:href="assets/icons/symbols.svg#link-bottom"></use>
+            </svg>
+          </div>
+        </section>
         <section class="events__services">
           <h2 class="section-title section-title--text1">дополнительные услуги</h2>
 
@@ -81,10 +89,53 @@
           </p>
         </section>
         @@include('blocks/table.html')
+        <section class="offers">
+          <div class="offers__container">
+            <p class="offers__text">Я хочу:</p>
+            <div class="offers__container1">
+                <button type="submit" class="offers__button1 btn2">Провести мероприятие</button>
+                <button type="submit" class="offers__button2 btn2">Стать арендатором</button>
+            </div>
+        </section>
+        <section class="cards">
+          <div class="cards__container">
+            <div class="cards__info">
+              <div class="cards__rect">
+                <svg class="link__icon" width="24" height="24">
+                  <use xlink:href="assets/icons/symbols.svg#important"></use>
+                </svg>
+              </div>
+              <div class="cards__title">Цены</div>
+              <p class="cards__descr">Цены, указанные на сайте носят информационный характер. Мы придерживаемся индивидуального подхода в работе с клиентом.</p>
+            </div>
+
+            <div class="cards__info">
+              <div class="cards__rect">
+                <svg class="link__icon" width="24" height="24">
+                  <use xlink:href="assets/icons/symbols.svg#contact"></use>
+                </svg>
+              </div>
+              <div class="cards__title">Контакты</div>
+              <p class="cards__descr">Отдел организации мероприятий</p>
+              <a href="tel:/+7 499 350 0730/" class="cards__descr-info">+7 499 350 0730</a>
+              <a href="mailto:hi@tagree.ru" class="cards__descr-info">hi@tagree.ru</a>
+            </div>
+
+            <div class="cards__info">
+              <div class="cards__rect">
+                <svg class="link__icon" width="24" height="24">
+                  <use xlink:href="assets/icons/symbols.svg#handshake"></use>
+                </svg>
+              </div>
+              <div class="cards__title">Преимущество</div>
+              <p class="cards__descr">Мы имеем все возможности для того, чтобы помочь как малому бизнесу и молодым талантам, так и большим корпорациям и холдингам.</p>
+            </div>
+          </div>
+        </section>
       </div>
       
     </main>
-    <footer class="page-footer"></footer>
+    @@include('blocks/page-footer.html')
 
   </body>
 </html>

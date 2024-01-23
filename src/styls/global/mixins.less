@@ -6,11 +6,33 @@
     margin-right: auto;
     padding-left: 40px;
     padding-right: 40px;
+
+    @media @bw1340 {
+      padding-left: 30px;
+      padding-right: 30px;
+      
+    }
+
+    @media @bw768{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .container1(){
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 624px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .width_624{
     box-sizing: border-box;
     width: 100%;
     max-width: 624px;
+    @media @bw1340{
+      min-width: 566px;
+    }
   }
   .display-none {
     display: none;

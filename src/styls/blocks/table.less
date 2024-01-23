@@ -73,10 +73,36 @@ body {
       text-transform: uppercase;
       &:first-child {
         padding-left: 0;
+        @media @bw768{
+          display: none;
+        }
+      }
+      @media @bw768{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 33.3333%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
       }
       &:last-child {
         border-right: none;
         padding-right: 0;
+        @media @bw768{
+          padding-right: 10px;
+        }
+      }
+      &:nth-child(2){
+        @media @bw768{
+          padding-left: 10px;
+        }
+      }
+      &:nth-child(2n-1){
+        @media @bw768{
+          background-color: fade(#1F1E1E, 3%);
+        }
       }
     }
     &__body-th {
@@ -89,6 +115,17 @@ body {
       font-size: 18px;
       line-height: 25px;
       text-align: left;
+      @media @bw768{
+        display: block;
+        height: auto;
+        min-height: 50px;
+        width: 100%;
+        padding: 15px 10px;
+        font-weight: 600;
+        text-align: center;
+        background-color: fade(#1F1E1E, 3%);
+
+      }
     }
     &__td {
       box-sizing: border-box;
@@ -98,14 +135,39 @@ body {
       font-weight: 600;
       font-size: 16px;
       line-height: 22px;
+      @media @bw768{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 33.33333%;
+        height: auto;
+        min-height: 50px;
+        border: none;
+        border-right: 1px solid @light_gray;
+      }
   
       &:last-child {
         border-right: none;
         padding-right: 0;
+        @media @bw768{
+          padding-right: 10px;
+        }
       }
-    }
+      &:nth-child(2n-1){
+        @media @bw768{
+          background-color: fade(#1F1E1E, 3%);
+        }
+      }
   }
   
+
+  &__footer-tr{
+    @media @bw768{
+      display: flex;
+      border-top:qpx solid @light_gray;
+
+    }
+  }
   .ok {
     display: block;
     position: relative;
@@ -128,3 +190,4 @@ body {
       transform: rotate(45deg);
     }
   }
+}
