@@ -4,6 +4,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Lenni Art</title>
   <link rel="stylesheet" href="styls/styls.css?ver=0">
 
@@ -49,9 +50,10 @@
       <section class="offers home__offers">
         <div class="offers__container">
           <p class="offers__text">Я хочу:</p>
-          <button type="submit" class="offers__button1 btn2">Провести мероприятие</button>
-          <button type="submit" class="offers__button2 btn2">Стать арендатором</button>
-        </div>
+          <div class="offers__container1">
+            <button type="submit" class="offers__button1 btn2">Провести мероприятие</button>
+            <button type="submit" class="offers__button2 btn2">Стать арендатором</button>
+          </div>
       </section>
       <section class="about home__about">
         <div class="about__container">
@@ -95,7 +97,76 @@
           </div>
         </div>
       </section>
-      <section class="near-events home__near-events"></section>
+      <section class="near-events home__near-events">
+        <!-- <picture class="near-events__picture">
+        <img class="near__img" src="assets/images/fon1.svg"/>
+    </picture> -->
+        <div class="near-events__fon">
+          <div class="near-events__container">
+            <h2 class="near-events__section-title section-title">Мероприятия</h2>
+            <section class="listing near-events__listing">
+              <div class="near-events__events-list">
+                <!-- prettier-ignore -->
+                <article class="event-card  listing__event-card">
+                  <a href="#" class="event-card__link">
+                    <picture class="event-card__picture">
+                      <source type="images/webp" srcset="@img_webp" />
+                      <img src="assets/images/Nirvana.svg" alt="Theatre Photosession" class="event-card__img" />
+                    </picture>
+                    <h4 class="event-card__title">Фотосессия в стенах Театра драмы</h4>
+                    <p class="event-card__description">Организовывая фотосессию для...</p>
+                    <time datetime="2021-11-26T00:00" class="event-card__time">26.11.2021</time>
+                  </a>
+                </article>
+                <article class="event-card  listing__event-card">
+                  <a href="#" class="event-card__link">
+                    <picture class="event-card__picture">
+                      <source type="images/webp" srcset="@img_webp" />
+                      <img src="assets/images/Stuff.png" alt="Theatre Photosession" class="event-card__img" />
+                    </picture>
+                    <h4 class="event-card__title">Фотосессия в стенах Театра драмы</h4>
+                    <p class="event-card__description">Организовывая фотосессию для...</p>
+                    <time datetime="2021-11-26T00:00" class="event-card__time">26.11.2021</time>
+                  </a>
+                </article>
+                <article class="event-card  listing__event-card">
+                  <a href="#" class="event-card__link">
+                    <picture class="event-card__picture">
+                      <source type="images/webp" srcset="@img_webp" />
+                      <img src="assets/images/Sade.png" alt="Theatre Photosession" class="event-card__img" />
+                    </picture>
+                    <h4 class="event-card__title">Фотосессия в стенах Театра драмы</h4>
+                    <p class="event-card__description">Организовывая фотосессию для...</p>
+                    <time datetime="2021-11-26T00:00" class="event-card__time">26.11.2021</time>
+                  </a>
+                </article>
+              </div>
+            </section>
+            <div class="near-events__scroll">
+              <div class="near-events__icons1">
+                <svg class="link__icon" width="91" height="62">
+                  <use xlink:href="assets/icons/symbols.svg#link-reverse"></use>
+                </svg>
+              </div>
+
+              <div class="near-events__icons2">
+                <svg class="link__icon" width="91" height="2">
+                  <use xlink:href="assets/icons/symbols.svg#rul"></use>
+                </svg>
+              </div>
+
+              <div class="near-events__icons1">
+                <svg class="link__icon" width="91" height="62">
+                  <use xlink:href="assets/icons/symbols.svg#link"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="listing__links">
+              <a href="#" class="listing__link listing__link--mt0 link">Смотреть все</a>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="listing home__listing">
         <h2 class="listing__title section-title">Блог</h2>
         <div class="listing__article-list">
@@ -117,6 +188,11 @@
                 </div>
               </a>
               <p class="article-card__description">Организовывая фотосессию для...</p>
+              <a href="#" class="article-card__link1 link">
+                <svg class="link__icon" width="91" height="60">
+                  <use xlink:href="assets/icons/symbols.svg#link"></use>
+                </svg>
+              </a>
             </div>
           </article>
           <article class="article-card listing__article-card">
@@ -136,6 +212,11 @@
                 </div>
               </a>
               <p class="article-card__description">Организовывая фотосессию для...</p>
+              <a href="#" class="article-card__link1 link">
+                <svg class="link__icon" width="91" height="60">
+                  <use xlink:href="assets/icons/symbols.svg#link"></use>
+                </svg>
+              </a>
             </div>
           </article>
           <article class="article-card listing__article-card">
@@ -155,10 +236,17 @@
                 </div>
               </a>
               <p class="article-card__description">Организовывая фотосессию для...</p>
+              <a href="#" class="article-card__link1 link">
+                <svg class="link__icon" width="91" height="60">
+                  <use xlink:href="assets/icons/symbols.svg#link"></use>
+                </svg>
+              </a>
             </div>
           </article>
         </div>
-        <a href="#" class="listing__link link">Смотреть все</a>
+        <div class="listing__links">
+          <a href="#" class="listing__link link">Смотреть все</a>
+        </div>
       </section>
       <section class="contacts home__contacts">
         <div class="contacts__container">
@@ -221,6 +309,10 @@
           </div>
         </div>
       </section>
+      <section class="do-it home__do-it">
+        <div class="do-it__first">Просто делайте, что нравится,</div>
+        <div class="do-it__second">а мы вам поможем</div>
+      </section>
 
       <div class="do-it home__do-it"></div>
     </div>
@@ -248,6 +340,36 @@
             <span class="check__label">Согласен на обработку персональных данных</span>
           </label>
         </form>
+      </div>
+      <div class="page-footer__date">
+        <span class="page-footer__date-1">© Millennials 2022</span>
+      </div>
+      <div class="page-footer__networks">
+        <div class="page-footer__networks-conf">Политика конфиденциальности</div>
+        <div class="page-footer__networks-cookies">Cookies</div>
+
+        <div class="networks__icons">
+          <div class="networks__icons-img">
+            <svg class="link__icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#insta"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="networks__icons1">
+          <div class="networks__icons-img">
+            <svg class="link__icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#vk"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="page-footer__networks-other">Создание и продвижение</div>
+        <div class="page-footer__networks-logo">
+          <svg class="link__icon" width="56" height="17">
+            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+          </svg>
+        </div>
       </div>
     </div>
   </footer>
