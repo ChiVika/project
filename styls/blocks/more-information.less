@@ -1,0 +1,44 @@
+.more-information{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 7px;
+    align-items: center;
+    max-width: 128px;
+    margin: 0 auto;
+    gap: 18px;
+    color: @black;
+    margin-bottom: 100px;
+
+
+    &__text{
+        text-align: center;
+        font-family: @font1;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    &__img{
+        max-width: 62px;
+        max-height: 91px;
+        align-self: center;
+        justify-content: end;
+    }
+
+    &--vert-link{
+        transition: color 0.2s;
+        &:hover{
+            @media (hover: hover){
+                color: @red;
+            }
+        }
+        &:active{
+            color: @red;
+        }
+    }
+    
+    
+    
+}

@@ -1,0 +1,52 @@
+.offers{
+    &__container{
+        .container;
+    }
+    &__container1{
+        .container1;
+    }
+    &__text{
+        .main-text;
+        margin-top: 100px;
+        font-size: 22px;
+        margin-bottom: 46px;
+        margin-left: 24px;
+    }
+    &__button1{
+        background-color: @red;
+        color: @white;
+        max-width: 272px;
+        width: 100%;
+        border: none;
+        margin-right: auto;
+        transition: background-color 0.2s;
+        &:active{
+            background-color: @red_dark;
+        }
+        &:hover{
+            @media (hover:hover){
+                background-color: @red_dark;
+            }
+        }
+    }
+    &__button2{
+        background-color: transparent;
+        color: @black;
+        max-width: 245.881px;
+        width: 100%;
+        border: 1px solid @black;
+        margin-left: 100px;
+        transition: color 0.2s, background-color 0.2s;
+
+        &:active{
+            background-color: @black;
+            color: @white;
+        }
+        &:hover{
+            @media (hover: hover){
+                background-color: @black;
+                color: @white;
+            }
+        }
+    }
+}
