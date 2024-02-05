@@ -25,11 +25,11 @@ const resources = {
     images: "src/assets/images/**/*.{png,jpg,jpeg,webp,gif,svg}",
     svgSprite: "src/assets/svg-sprite/*.svg",
     static: [
-        "src/picture/icons/**/*.*",
-        "src/picture/favicons/**/*.*",
+        "src/assets/icons/**/*.*",
+        "src/assets/favicons/**/*.*",
         "src/assets/fonts/**/*.{woff,woff2}",
-        "src/picture/video/**/*.{mp4,webm}",
-        "src/picture/audio/**/*.{mp3,ogg,wav,aac}",
+        "src/assets/video/**/*.{mp4,webm}",
+        "src/assets/audio/**/*.{mp3,ogg,wav,aac}",
         "src/json/**/*.json",
         "src/php/**/*.php"
     ]
