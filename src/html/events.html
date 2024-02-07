@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  @@include('blocks/head.html')
+  <body class="body">
+    @@include('blocks/page-header.html')
+    <main class="main">
+      @@include('blocks/breadcrums.html')
+      <div class="events">
+        <section class="listing events__listing events__listing">
+          <h2 class="listing__title section-title">Мероприятия</h2>
+          <div class="listing__events-list">
+            <!--prettier-ignore-->
+            @@loop('blocks/event-card.html', [
+            {
+              "class": "listing__event-card",
+              "img": "assets/images/Nirvana.svg",
+              "alt": "nirvana",
+              "title": "Собираемся и слушаем альбом Nirvana",
+              "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
+              "time": "07.12.2022 | начало 18.00",
+              "datetime": "2022-12-07T18:00"
+            },
+            {
+              "class": "listing__event-card",
+              "img": "assets/images/Stuff.png",
+              "alt": "stuff",
+              "title": "Есть тема, нужно обсудить с HowStuffWorks",
+              "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи: от игрушек до водяных дамб.",
+              "time": "14.12.2022 | начало 18.30",
+              "datetime": "2022-12-14T18:30"
+            },
+            {
+              "class": "listing__event-card",
+              "img": "assets/images/Sade.png",
+              "alt": "sade",
+              "title": "Вечер | The Best of Sade",
+              "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза,ритм-блюза и фанка.",
+              "time": "16.12.2022 | начало 20.00",
+              "datetime": "2022-12-16T20:00"
+            },
+            {
+              "class": "listing__event-card",
+              "img": "assets/images/Mal.png",
+              "alt": "malevich",
+              "title": "Выставка Малевича в Томске",
+              "descr": "Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.",
+              "time": "23.12.2022 | начало 20.00",
+              "datetime": "2022-12-23T20:00"
+            },
+            {
+              "class": "listing__event-card",
+              "img": "assets/images/Tat.png",
+              "alt": "tat",
+              "title": "Мастер — класс по студийной съемке от Tatler",
+              "descr": "Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.",
+              "time": "25.12.2022 | начало 13.00",
+              "datetime": "2022-12-25T13:00"
+            },
+            {
+              "class": "listing__event-card",
+              "img": "assets/images/hatt.png",
+              "alt": "concert",
+              "title": "Повесилимся на славу на концерте The Hatters",
+              "descr": "Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко",
+              "time": "27.12.2022 | начало 10.00",
+              "datetime": "2022-12-27T10:00"
+            }
+          ])
+
+          </div>
+        </section>
+        <section class="more-information more-information--vert-link link__icon">
+          <span class="more-information__text"> Показать еще</span>
+          <div class="more-information__img">
+            <svg>
+              <use xlink:href="assets/icons/symbols.svg#link-bottom"></use>
+            </svg>
+          </div>
+        </section>
+        <section class="events__services">
+          <h2 class="section-title section-title--text1">дополнительные услуги</h2>
+
+          <p class="events__services-description">Перед запуском проекта, мы подготавливаем 
+            подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены 
+            и мы можем приступать к реализациии проекта, начинается сложная, но интересная 
+            работа, результатом которой 
+            будет проведение вашего мероприятия на высшем уровне.
+          </p>
+        </section>
+        @@include('blocks/table.html')
+        <section class="offers">
+          <div class="offers__container">
+            <p class="offers__text">Я хочу:</p>
+            <div class="offers__container1">
+                <button type="submit" class="offers__button1 btn2">Провести мероприятие</button>
+                <button type="submit" class="offers__button2 btn2">Стать арендатором</button>
+            </div>
+          </div>  
+        </section>
+        <section class="cards">
+          <div class="cards__container">
+            <div class="cards__info">
+              <div class="cards__rect">
+                <svg class="link__icon" width="24" height="24">
+                  <use xlink:href="assets/icons/symbols.svg#important"></use>
+                </svg>
+              </div>
+              <div class="cards__title">Цены</div>
+              <p class="cards__descr">Цены, указанные на сайте носят информационный характер. Мы придерживаемся индивидуального подхода в работе с клиентом.</p>
+            </div>
+
+            <div class="cards__info">
+              <div class="cards__rect">
+                <svg class="link__icon" width="24" height="24">
+                  <use xlink:href="assets/icons/symbols.svg#contact"></use>
+                </svg>
+              </div>
+              <div class="cards__title">Контакты</div>
+              <p class="cards__descr">Отдел организации мероприятий</p>
+              <a href="tel:/+74993500730/" class="cards__descr-info">+7 499 350 0730</a>
+              <a href="mailto:hi@tagree.ru" class="cards__descr-info">hi@tagree.ru</a>
+            </div>
+
+            <div class="cards__info">
+              <div class="cards__rect">
+                <svg class="link__icon" width="24" height="24">
+                  <use xlink:href="assets/icons/symbols.svg#handshake"></use>
+                </svg>
+              </div>
+              <div class="cards__title">Преимущество</div>
+              <p class="cards__descr">Мы имеем все возможности для того, чтобы помочь как малому бизнесу и молодым талантам, так и большим корпорациям и холдингам.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+    </main>
+    @@include('blocks/page-footer.html')
+
+  </body>
+</html>

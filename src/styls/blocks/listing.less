@@ -1,0 +1,32 @@
+.listing{
+   .container;
+    display: flex;
+    flex-direction: column;
+
+    &__events-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -30px -120px;
+    }
+    &__event-card{
+        width: calc(33.3333% - 60px);
+        margin: 0 30px 120px;
+    }
+
+    &__links{
+        width: 149px;
+        margin-left: auto;
+    }
+    &__link{
+        padding: 15px 0 15px 40px;
+        margin-top: 70px;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: @font1;
+
+        &--mt25{
+            margin-top: 25px;
+            margin-bottom: 84px;
+        }
+    }
+}

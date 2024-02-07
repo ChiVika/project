@@ -1,0 +1,57 @@
+.cards{
+    &__container{
+        .container;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info{
+        max-width: 401px;
+    }
+    &__rect{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 40px;
+        align-items: center;
+        width: 110px;
+        height: 110px;
+        background-color: @black;
+        color: @red;
+    }
+
+    &__title{
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+    &__descr{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    &__descr-info{
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        text-align: center;
+        &[href] {
+            transition: color 0.2s;
+            text-decoration: none;
+            &:hover{
+                @media (hover: hover){
+                    color: @red;
+                }
+            }
+            &:active{
+                color: @red
+            }
+        }
+        
+    }
+
+}
