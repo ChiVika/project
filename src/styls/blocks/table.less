@@ -40,30 +40,12 @@ body {
       &:nth-child(2n-1) {
         background-color: fade(#1F1E1E, 3%);
         @media @bw768 {
-          border-color: transparent;
+          background-color: transparent;
           
         }
       }
     }
-    &__th {
-      @media @bw768{
-        font-size: 14px;
-      }
-      height: 85px;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 1.35;
-    }
-    &__footer-th {
-      height: 60px;
-      font-size: 0;
-      @media @bw768 {
-        font-weight: 300;
-        color: #6c6c6c;
-        font-style: 14px;
-        line-height: 1.35;
-      }
-    }
+    
     &__th,
     &__footer-th {
       box-sizing: border-box;
@@ -102,6 +84,26 @@ body {
         @media @bw768{
           background-color: fade(#1F1E1E, 3%);
         }
+      }
+    }
+    &__th {
+      @media @bw768{
+        font-size: 14px;
+      }
+      height: 85px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+    &__footer-th {
+      color: transparent;
+      height: 60px;
+      font-size: 16px;
+      @media @bw768 {
+        font-weight: 300;
+        color: #6C6C6C;
+        font-style: 14px;
+        line-height: 1.35;
       }
     }
     &__body-th {
@@ -163,7 +165,7 @@ body {
   &__footer-tr{
     @media @bw768{
       display: flex;
-      border-top:qpx solid @light_gray;
+      border-top: 1px solid @light_gray;
 
     }
   }

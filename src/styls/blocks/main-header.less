@@ -11,6 +11,9 @@
         @media @bw1340 {
             font-style: 35px;           
         }
+        @media @bw960 {
+            margin-top: 80px;
+        }
         @media @bw768 {
             font-style: 30px;
             margin-top: 80px;
@@ -24,11 +27,28 @@
         
     }
     &__picture{
+        display: block;
+        position: relative;
         text-align: center;
+        &::after{
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: 16.927%;
+
+        }
+
     }
     &__img{
         width: 100%;
         max-height: 325px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
 
         @media @bw1340 {
             max-height: 257px;

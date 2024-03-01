@@ -2,26 +2,21 @@
     box-sizing: border-box;
     width: 100%;
     max-width: 1414px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px;
 
     @media @bw1340 {
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: 30px;
+      padding-right: 30px;
       
     }
 
     @media @bw768{
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-
-    @media @bw370{
       padding-left: 20px;
       padding-right: 20px;
     }
+
   }
 
   .container1(){
@@ -35,8 +30,24 @@
     box-sizing: border-box;
     width: 100%;
     max-width: 624px;
+
+    @media @bw1660{
+      max-width: 604px;
+      padding: 8px 72.8px;
+    }
     @media @bw1340{
-      min-width: 566px;
+      max-width: 566px;
+      min-height: 52px;
+      margin-bottom: 100px;
+      padding: 11px 40px;
+      font-size: 24px;
+    }
+    @media @bw768 {
+      max-width: 100%;
+      min-height: 42px;
+      margin-bottom: 80px;
+      font-size: 16px;
+      padding: 11px 19px;
     }
   }
   .display-none {
