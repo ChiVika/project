@@ -8,6 +8,9 @@
         box-shadow: 0 0 30px fade(@black, 55%);
       }
     }
+    @media @bw1020 {
+      display: block;
+    }
     &__link {
       flex-shrink: 0;
       align-self: flex-start;
@@ -24,6 +27,14 @@
           }
         }
       }
+      @media @bw1020 {
+        width: 708px;
+        margin-right: 0;
+      }
+      @media @bw700 {
+        width: 280px;
+        margin-right: 0;
+      }
     }
     &__picture {
       display: block;
@@ -36,6 +47,7 @@
         display: block;
         width: 100%;
         padding-top: 62.3126%;
+        
       }
     }
     &__img {
@@ -46,6 +58,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      
     }
     &__info {
         box-sizing: border-box;
@@ -55,14 +68,28 @@
         width: 100%;
         padding-top: 30px;
         padding-bottom: 30px;
-        padding: 30px 0;
         padding-right: 150px;
+        @media @bw1020 {
+          padding-top: 26px;
+          padding-bottom: 0;
+          padding-right: 104px;
+        }
+        @media @bw700 {
+          padding-top: 10px;
+          padding-right: 0;
+        }
       }
       &__time {
         margin: 0 0 40px;
         font-weight: 300;
         font-size: 16px;
         line-height: 22px;
+        @media @bw700 {
+          font-size: 14px;
+        }
+        @media @bw700 {
+          margin-bottom: 20px;
+        }
       }
       &__title-link,
       &__description {
@@ -77,6 +104,9 @@
           color: @red;
           text-decoration-color: @red;
         }
+        @media @bw1020 {
+          margin-bottom: 20px;
+        }
       }
       &__title {
         margin: 0;
@@ -84,6 +114,10 @@
         font-weight: 600;
         font-size: 24px;
         line-height: 33px;
+        @media @bw700 {
+          font-size: 16px;
+          line-height: 21.79px;
+        }
       }
       &__description {
         margin: 0;
@@ -113,6 +147,18 @@
           background-color: @black;
           pointer-events: none;
         }
+        @media @bw1020 {
+         margin-top: 100px; 
+         &::before{
+          margin-bottom: 50px;
+         }
+        }
+        @media @bw1020 {
+         margin-top: 80px; 
+         &::before{
+          margin-bottom: 40px;
+         }
+        }
       }
       &__link1{
         display: block;
@@ -121,5 +167,15 @@
         bottom: 0;
         margin-bottom: 60px;
         padding-bottom: 30px;
+        @media @bw1020 {
+          margin-bottom: 10px;
+        }
+        @media @bw600 {
+          position: relative;
+          padding-bottom: 40px;
+          margin-top: 20px;
+          text-align: right;
+          margin-bottom: 0;
+        }
       }
   }

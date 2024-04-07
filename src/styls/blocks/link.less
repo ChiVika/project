@@ -23,5 +23,19 @@
     &__name,
     &__icon{
         cursor: pointer;
+        
+    }
+    &__name{
+        @media @bw500 {
+            font-size: 14px;
+        }
+    }
+    &__icon{
+        width: 91px;
+        height: 60px;
+        @media @bw1020 {
+            width: 67px;
+            height: 40px;
+        }
     }
 }

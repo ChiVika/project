@@ -8,14 +8,11 @@
         margin-bottom: 70px;
         font-size: 45px;
 
-        @media @bw1340 {
-            font-style: 35px;           
+        @media @bw1660 {
+            font-size: 35px;           
         }
-        @media @bw960 {
-            margin-top: 80px;
-        }
-        @media @bw768 {
-            font-style: 30px;
+        @media @bw1020 {
+            font-size: 30px;
             margin-top: 80px;
             margin-bottom: 51px;
         }
@@ -49,16 +46,6 @@
         height: 100%;
         object-fit: contain;
 
-
-        @media @bw1340 {
-            max-height: 257px;
-        }
-        @media @bw768{
-            max-height: 165px;
-        }
-        @media @bw370 {
-            max-height: 74px;
-        }
     }
     &__text{
         .main-text;
@@ -66,6 +53,26 @@
         margin-left: 172px;
         margin-right: 172px;
         margin-top: 70px;
+
+        @media @bw1660 {
+            margin-bottom: 100px;
+            font-size: 35px;
+            margin-left: 241px;
+            margin-right: 241px;
+
+        }
+        @media @bw1020 {
+            font-size: 30px;
+            margin-top: 49px;
+            margin-bottom: 73px;
+            margin-right: 18px;
+            margin-left: 18px;
+        }
+        @media @bw650 {
+            width: 100%;
+            font-size: 12px;
+            margin: 28px 3px 40px;
+        }
         
     }
  

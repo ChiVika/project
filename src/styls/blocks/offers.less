@@ -9,18 +9,65 @@
         .main-text;
         margin-top: 100px;
         font-size: 22px;
-        font-weight: 400;
         margin-bottom: 46px;
-        margin-left: 24px;
+        margin-left: 631px;
+        margin-right: 613px;
         font-family: @font2;
+
+        @media @bw1660{
+            margin-left: 594px;
+            margin-right: 576px;
+            line-height: 30px;
+        }
+
+        @media @bw1170{
+            line-height: 20.48px;
+            font-size: 16px;
+            font-weight: 500;
+            margin-left: 321px;
+            margin-right: 323px;
+            margin-top: 73px;
+            margin-bottom: 43px;
+        }
+
+        @media @bw1020{
+            margin-top: 73px;
+            margin-bottom: 43px;
+            margin-left: 318px;
+            margin-right: 325px;
+            line-height: 21.79px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        @media @bw960{
+            margin-top: 73px;
+            margin-bottom: 43px;
+            line-height: 21.79px;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @media @bw500{
+            margin: 40px 110.5px 45px;
+            font-size: 13px;
+            font-weight: 400;
+        }
     }
     &__button1{
         background-color: @red;
         color: @white;
         max-width: 272px;
+        min-height: 52px;
         width: 100%;
         border: none;
         margin-right: auto;
+        margin-bottom: 200px;
+        font-size: 16px;
+        font-family: @font1;
+        font-weight: 600;
+
         transition: background-color 0.2s;
         &:active{
             background-color: @red_dark;
@@ -30,14 +77,24 @@
                 background-color: @red_dark;
             }
         }
+        @media @bw1020{
+            margin-bottom: 130px;
+        }
+        @media @bw700{
+            max-width: 100%;
+            min-height: 49px;
+            margin: 0 0 25px;
+            font-size: 14px;
+        }
+        
     }
     &__button2{
         background-color: transparent;
         color: @black;
-        max-width: 245.881px;
+        max-width: 245.88px;
         width: 100%;
         border: 1px solid @black;
-        margin-left: 100px;
+        margin-left: 101.5px;
         transition: color 0.2s, background-color 0.2s;
 
         &:active{
@@ -49,6 +106,21 @@
                 background-color: @black;
                 color: @white;
             }
+        }
+        @media @bw1660{
+            max-width: 238px;
+            margin-left: 89px;
+        }
+        @media @bw1020{
+            margin-left: 51px;
+            min-width: 238px;
+            margin-bottom: 130px;
+        }
+        @media @bw700{
+            max-width: 100%;
+            min-height: 49px;
+            margin: 0 0 100px;
+            font-size: 14px;
         }
     }
     &__button1,

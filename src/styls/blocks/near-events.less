@@ -13,6 +13,10 @@
     &__section-title{
         margin-top: 120px;
         margin-bottom: 158px;
+        @media @bw1660 {
+            margin-top: 100px;
+            margin-bottom: 130px;
+        }
     }
     &__listing{
         margin-bottom: 70px;
@@ -20,7 +24,7 @@
     &__events-list{
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -30px -120px;
+        //margin: 0 -30px -120px;
     }
     &__event-card{
         width: calc(33.3333% - 60px);
@@ -29,10 +33,9 @@
         display: flex;
         justify-content: space-between;
         max-width: 525px;
-        gap: 122px;
         margin-left: auto;
         margin-right: auto;
-        position: relative;
+        margin-top: 70px;
         
     }
     &__icons2{

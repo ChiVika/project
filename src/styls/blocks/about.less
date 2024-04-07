@@ -1,5 +1,11 @@
 .about{
     padding-bottom: 90px;
+    @media @bw1660 {
+        padding-bottom: 100px;
+    }
+    @media @bw1020 {
+        padding-bottom: 50px;
+    }
     &__block{
         display: flex;
         flex-direction: column;
@@ -13,15 +19,31 @@
         font-size: 44px;
         font-weight: 700;
         color: @black;
+        font-family: @font1;
         &--w868{
             max-width: 868px;
             width: 100%;
         }
-        // &--mt{
-        //     margin-top: -120px;
-        // }
         &--2{
             grid-area: title;
+        }
+        @media @bw1660 {
+            &--w868{
+                max-width: 831px;
+                width: 100%;
+            }
+        }
+        @media @bw1020 {
+            font-size: 26px;
+            line-height: 35.41px;
+            margin-top: 53px;
+            margin-bottom: 16px;
+
+        }
+        @media @bw500 {
+            margin-top: 30px;
+            margin-bottom: 0;
+            font-size: 18px;
         }
     }
     &__text{
@@ -37,13 +59,28 @@
         }
         &--mb90{
             margin-bottom: 90px;
+            
+
+        }
+        @media @bw1660 {
+            max-width: 830px;
+        }
+        @media @bw1020{
+            font-size: 16px;
+            padding-left: 71px;
+            line-height: 21.79px;
+            margin-bottom: 80px;
+        }
+        @media @bw500 {
+            font-size: 16px;
+            padding-left: 0;
+            margin-bottom: 20px;
         }
     }
     &__picture{
         grid-area: picture;
         position: relative;
         display: block;
-        //width: 65.217%;
 
         &::before{
             content: "";
@@ -51,7 +88,6 @@
             width: 100%;
             padding-top: 66.322%;
         }
-
     }
     &__img{
         position: absolute;
@@ -70,16 +106,35 @@
             "text text text";
         gap: 60px;
         grid-template-columns: 1fr 1fr 404px;
+        @media @bw1020{
+            grid-template-areas: 
+                "picture picture"
+                "title picture2"
+                "text picture2";
+            grid-template-columns: 1fr 262px;
+            gap: 27px;
+        }
+        @media @bw1660 {
+            grid-template-columns: 1fr 1fr 393px;
+            gap: 39px;
+        }
+        @media @bw500 {
+            grid-template-areas: 
+                "picture picture"
+                "title title"
+                "text text"
+                "picture2 picture2";
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
 
         
 
     }
     &__picture2{
         grid-area: picture2;
-        // margin-top: -280px;
         align-self: flex-end;
-        // max-width: 404px;
-        //width: 30.284%;
         position: relative;
         display: block;
         &::before{
@@ -87,6 +142,16 @@
             display: block;
             width: 100%;
             padding-top: 122.029%;
+        }
+        @media @bw1020 {
+            align-self: start;
+            margin-top: 25px;
+            
+        }
+        @media @bw500 {
+            margin-top: 0;
+            margin-bottom: 50px;
+            margin-left: 87px;
         }
 
     }
@@ -96,6 +161,12 @@
         justify-content: space-between;
         align-items: flex-end;
         gap: 60px;
+        @media @bw1020{
+            display: block;
+        }
+        @media @bw500 {
+        }
+        
 
     }
     &__picture3{
@@ -129,9 +200,65 @@
         bottom: 0;
         width: calc(100% - 58px);
         object-fit: contain;
+
+        @media @bw500 {
+            left: 11px;
+            top: 5px;
+            width: calc(100% - 13px);
+        }
     }
     &__block3-wrapper{
         max-width: 344px;
         width: 100%;
+        padding-bottom: 25px;
+
+        @media @bw1020 {
+            display: flex;
+            margin-top: 80px;
+            max-width: 100%;
+
+
+        }
+        @media @bw500 {
+            display: block;
+        }
+
     }
+
+    &__text1{
+        margin-bottom: 90px;
+        font-size: 18px;
+        font-weight: 400;
+        color: @black;
+        max-width: 870px;
+
+        @media @bw1660 {
+            max-width: 830px;
+        }
+        @media @bw1020 {
+            font-size: 16px;
+            padding-left: 0;
+            line-height: 21.79px;
+            max-width: 280px;
+        }
+        @media @bw500 {
+            margin-top: 60px;
+            margin-bottom: 30px;
+        }
+    }
+    &__link{
+        @media @bw1020 {
+            margin-left: auto;
+            padding-top: 54px;
+            width: 100%;
+            max-width: 262px;
+        }
+        @media @bw500 {
+            margin-left: 0;
+            min-width: 280px;
+        }
+
+    }
+    
+
 }
