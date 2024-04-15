@@ -2,6 +2,13 @@
     display: flex;
     gap: 54px;
     align-items: center;
+    
+
+    @media @bw960 {
+        flex-direction: column;
+
+    }
+    
     &__img{
         display: flex;
         justify-content: center;
@@ -17,6 +24,10 @@
         font-size: 20px;
         line-height: normal;
         color: @black;
+        @media @bw960 {
+            font-size: 18px;
+            text-align: center;
+        }
 
     }
     &__info{
@@ -38,8 +49,9 @@
                 color: @red
             }
         }
+        @media @bw960 {
+            text-align: center;
+        }
     }
-    &:last-child{
-        margin-bottom: 0;
-    }
+
 }

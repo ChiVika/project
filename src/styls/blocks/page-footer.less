@@ -1,6 +1,10 @@
 .page-footer{
     box-sizing: border-box;
-    padding: 0px 0 75px;
+    padding: 0 0 75px;
+    position: relative;
+    @media @bw500 {
+        padding-bottom: 50px;
+    }
     &__container{
         .container;
     }
@@ -25,6 +29,10 @@
     &__wrapper{
         display: flex;
         justify-content: space-between;
+        @media @bw500 {
+            flex-direction: column;
+            gap: 59px;
+        }
     }
     &__nav{
         margin-right: 30px;
@@ -42,6 +50,10 @@
             width: 4px;
             height: 100%;
             background-color: @red;
+        }
+        @media @bw500 {
+            gap: 27px;
+            padding-left: 22px;
         }
     }
     &__nav-link{
@@ -65,10 +77,27 @@
         font-weight: 400;
         margin-top: 60px;
         margin-bottom: 20px;
+        @media @bw1660 {
+            margin-top: 58px;
+        }
+        @media @bw1020 {
+            margin-top: 178px;
+            margin-bottom: 14px;
+            font-size: 14px;
+        }
+        @media @bw500 {
+            position: absolute;
+            right: 0;
+            bottom: 60px;
+        }
     }
 
     &__networks{
         display: flex;
+        @media @bw500 {
+            flex-direction: column;
+            margin-top: 168px;
+        }
     }
 
     &__networks-logo{
@@ -76,14 +105,33 @@
         margin-left: auto;
         max-width: 56px;
         margin-left: 0;
+        @media @bw500 {
+            position: absolute;
+            right: 0;
+            bottom: 45px;
+        }
+
     }
 
     &__networks-other{
         margin-left: auto;
         margin-right: 15px;
+        @media @bw500 {
+            margin-left: 23px;
+            margin-right: 0;
+        }
     }
     &__networks-cookies{
-        margin-left: 60px;
+        margin-left: 15px;
+        @media @bw500 {
+            margin-left: 0;
+            margin-bottom: 40px;
+        }
+    }
+    &__networks-conf{
+        @media @bw500 {
+            margin-bottom: 20px;
+        }
     }
 
     &__networks-conf,
@@ -91,6 +139,7 @@
     &__networks-other{
         text-decoration: none;
         transition: background-color 0.2s;
+        font-size: 14px;
         &:hover{
             @media (hover: hover){
                 color: @red;

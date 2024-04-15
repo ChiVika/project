@@ -8,6 +8,9 @@
         &--mb50{
             margin-bottom: 50px;
         }
+        @media @bw1020 {
+            column-gap: 30px;
+        }
     }
     &__group{
         width: calc(50% - 30px);
@@ -17,16 +20,27 @@
         display: block;
         &--w50{
             width: calc(50% - 30px);
+            @media @bw1020 {
+                width: calc(50% - 15px);
+
+            }
         }
 
         &--mb30{
             margin-bottom: 30px;
+            @media @bw1020 {
+                margin-bottom: 29px;
+
+            }
         }
     }
 
     &__btn{
         max-width: 400px;
         width: 100%;
+        @media @bw1020 {
+            max-width: 289px;
+        }
     }
 
     &__check{
@@ -48,6 +62,9 @@
         overflow: hidden;
         padding: 0 0;
         margin-left: 200px;
+        @media @bw1020 {
+           margin-left: 116px;
+        }
         
 
     }

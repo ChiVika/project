@@ -6,16 +6,43 @@
         display: flex;
         justify-content: space-between;
 
+        @media @bw960 {
+            flex-direction: column;
+        }
+
     }
     &__items{
         display: flex;
         flex-direction: column;
         gap: 67px;
+        @media @bw1660 {
+            gap: 52px;
+        }
+        @media @bw960 {
+            order: 2;
+            flex-direction: row;
+            gap: 114px;
+            &:first-child{
+                margin-left: 64px;
+            }
+            &:last-child{
+                margin-left: -20px;
+            }
+
+
+        }
         &:first-child{
             margin-top: 15px;
+            @media @bw1660{
+                margin-top: 30px;
+            }
         }
-        &:last-child{
-            
+        
+    }
+    &__map{
+        @media @bw960 {
+            order: 1;
         }
     }
+
 }

@@ -1,12 +1,12 @@
 .pp{
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     box-sizing: border-box;
-    padding: 50px 50px 50px;
+    padding: 90px 50px 50px;
     overflow-y: auto;
     z-index: 110;
     background-color: @gray;
@@ -14,6 +14,9 @@
     @supports(backdrop-filter: blur(25px)){
         background-color: @black_40;
         backdrop-filter: blur(25px);
+    }
+    @media @bw1020 {
+        padding-top: 72px;
     }
     &__conteiner{
         display: flex;
@@ -28,6 +31,9 @@
         background-position: 0 0;
         background-size: auto;
         margin: auto;
+        @media @bw1660 {
+            max-width: 1144px;
+        }
     }
     &__title{
         margin: -110px 0 70px;
@@ -43,6 +49,12 @@
         line-height: 30px;
         color: @white;
         font-weight: 400;
+        @media @bw1020 {
+            max-width: 465px;
+            padding-left: 18px;
+            padding-right: 60px;
+            margin-left: -27px;
+        }
 
     }
     &__sticky-close{

@@ -9,6 +9,9 @@
         &--mb7{
             margin-bottom: 7px;
         }
+        @media @bw1020 {
+            margin-top: 30px;
+        }
     }
     &__inputs{
         display: flex;
@@ -64,10 +67,13 @@
 
     &__label{
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         font-size: 16px;
         line-height: 22px;
         color: @black;
+        @media @bw1020 {
+            margin-bottom: 12px;
+        }
         &--textarea{
             font-weight: 700;
             font-family: @font1;

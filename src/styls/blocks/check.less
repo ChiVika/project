@@ -35,11 +35,19 @@
         box-sizing: border-box;
         background-color: transparent;
         transition: background-color 0.2s;
+        @media @bw500 {
+          top: 12px;
+        }
 
     }
-    &__labal{
+    &__label{
         font-size: 14px;
+        font-weight: 300;
+        font-family: @font1;
         color: @black;
+        @media @bw500 {
+          font-size: 12px;
+        }
 
     }
     &--red {

@@ -2,6 +2,31 @@
     &__icons{
         margin-left: 203px;
         margin-right: 44px;
+        @media @bw1660 {
+            margin-left: 166px;
+        }
+        @media @bw1020{
+            position: absolute;
+            margin: 0;
+            bottom: 172px;
+            right: 406px;
+
+        }
+        @media @bw500 {
+            right: 175px;
+            bottom: 230px;
+        }
+    }
+    &__icons1{
+        @media @bw1020{
+            position: absolute;
+            bottom: 172px;
+            right: 304px;
+        }
+        @media @bw500 {
+            right: 97px;
+            bottom: 230px;
+        }
     }
     &__icons-img{
         display: flex;
@@ -12,5 +37,9 @@
         background-color: @black;
         border-radius: 50%;
         margin-top: -40px;
+        @media @bw500 {
+            width: 48px;
+            height: 48px;
+        }
     }
 }

@@ -10,8 +10,14 @@
         white-space: nowrap;
         text-align: center;
 
-        @media @bw1340 {
+        @media @bw1660 {
             font-size: 90px;
+        }
+        @media @bw1020 {
+            font-size: 80px;
+        }
+        @media @bw500 {
+            font-size: 40px;
         }
     }
 
@@ -19,13 +25,43 @@
         margin-left: -44px;
         margin-right: -189px;
         width: 100%;
+        @media @bw1020 {
+            margin-left: -30px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__first1{
+        @media @bw1020 {
+            margin-left: -60px;
+        }
+        @media @bw500 {
+            margin-left: 15px;
+        }
+    }
+    &__first2{
+        @media @bw1020 {
+            margin-left: 310px;
+        }
+        @media @bw500 {
+            margin-left: 110px;
+        }
+        
     }
     &__second{
         width: 100%;
         margin-left: 450px;
-        @media @bw1340 {
+        @media @bw1660 {
             margin-left: 305px;
+            margin-left: 310px;
         }
+        @media @bw1020 {
+            margin-left: 0;
+        }
+        @media @bw500 {
+            margin-left: -60px;
+        }
+        
 
 
     }
