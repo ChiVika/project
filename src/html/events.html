@@ -7,13 +7,13 @@
     <main class="main">
       @@include('blocks/breadcrums.html')
       <div class="events">
-        <section class="listing events__listing events__listing">
+        <section class="listing events__listing events__listing--mb70">
           <h2 class="listing__title section-title">Мероприятия</h2>
           <div class="listing__events-list">
             <!--prettier-ignore-->
             @@loop('blocks/event-card.html', [
             {
-              "class": "listing__event-card",
+              "class": "listing__event-card listing__event-card--events",
               "img": "assets/images/Nirvana.svg",
               "alt": "nirvana",
               "title": "Собираемся и слушаем альбом Nirvana",
@@ -22,7 +22,7 @@
               "datetime": "2022-12-07T18:00"
             },
             {
-              "class": "listing__event-card",
+              "class": "listing__event-card listing__event-card--events",
               "img": "assets/images/Stuff.png",
               "alt": "stuff",
               "title": "Есть тема, нужно обсудить с HowStuffWorks",
@@ -31,7 +31,7 @@
               "datetime": "2022-12-14T18:30"
             },
             {
-              "class": "listing__event-card",
+              "class": "listing__event-card listing__event-card--events",
               "img": "assets/images/Sade.png",
               "alt": "sade",
               "title": "Вечер | The Best of Sade",
@@ -40,7 +40,7 @@
               "datetime": "2022-12-16T20:00"
             },
             {
-              "class": "listing__event-card",
+              "class": "listing__event-card listing__event-card--events",
               "img": "assets/images/Mal.png",
               "alt": "malevich",
               "title": "Выставка Малевича в Томске",
@@ -49,7 +49,7 @@
               "datetime": "2022-12-23T20:00"
             },
             {
-              "class": "listing__event-card",
+              "class": "listing__event-card listing__event-card--events",
               "img": "assets/images/Tat.png",
               "alt": "tat",
               "title": "Мастер — класс по студийной съемке от Tatler",
@@ -58,7 +58,7 @@
               "datetime": "2022-12-25T13:00"
             },
             {
-              "class": "listing__event-card",
+              "class": "listing__event-card listing__event-card--events",
               "img": "assets/images/hatt.png",
               "alt": "concert",
               "title": "Повесилимся на славу на концерте The Hatters",

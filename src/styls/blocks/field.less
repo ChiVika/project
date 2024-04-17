@@ -12,6 +12,10 @@
         @media @bw1020 {
             margin-top: 30px;
         }
+        @media @bw700 {
+            margin-top: 0;
+            font-size: 16px;
+        }
     }
     &__inputs{
         display: flex;
@@ -38,6 +42,9 @@
     }
     &__textarea{
         height: 150px;
+        @media @bw700 {
+            height: 234px;
+        }
     }
 
 
@@ -50,6 +57,9 @@
         }
         &--w110{
             width: 110px;
+            @media @bw700 {
+                width: 99px;
+            }
 
         }
 
@@ -74,12 +84,18 @@
         @media @bw1020 {
             margin-bottom: 12px;
         }
+        @media @bw700 {
+            margin-bottom: 20px;
+        }
         &--textarea{
             font-weight: 700;
             font-family: @font1;
             font-size: 18px;
             line-height: 25px;
             color: @black;
+            @media @bw700 {
+                font-size: 16px;
+            }
         }
     }
 
