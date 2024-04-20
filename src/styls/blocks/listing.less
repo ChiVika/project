@@ -9,6 +9,7 @@
         margin: 0 -30px 0px;
         row-gap: 120px;
         @media @bw1660 {
+            justify-content: center;
             margin: 0 -20px 0px;
             row-gap: 100px;
           }
@@ -31,22 +32,27 @@
     &__event-card{
         width: calc(33.3333333% - 40px);
         margin: 0 30px 0;
+        max-width: 405px;
         &:first-child{
           margin-left: 0;
         }
         &:last-child{
           margin-right: 0;
         }
+
         @media @bw1660 {
+            max-width: 393px;
             width: calc(33.3333% - 27px);
             margin: 0 20px 0;
           }
           @media @bw1340 {
+            max-width: 339px;
             width: calc(33.3333% - 30px);
             margin: 0 15px 0;
             
           }
           @media @bw1020 {
+            max-width: 339px;
             width: calc(50% - 30px);
             max-width: 405px;
             margin: 0 15px 0;
@@ -62,14 +68,33 @@
           &:nth-child(3n){
             margin-right: 0;
           }
-          &:nth-child(1){
-            margin-left: 0;
-            
+          @media @bw1660 {
+            &:nth-child(3n){
+              margin-right: 0;
+            }
+            &:nth-child(1){
+              margin-left: 0;
+              
+            }
+            &:nth-child(4n){
+              margin-left: 0;
+            }
           }
-          &:nth-child(4n){
-            margin-left: 0;
+          
+          @media @bw1020 {
+            &:nth-child(3n){
+              margin-right: 15px;
+            }
+            &:nth-child(4n){
+              margin-left: 15px;
+            }
+            &:nth-child(2n+1){
+              margin-left: 0;
+            }
+            &:nth-child(2n){
+              margin-right: 0;
+            }
           }
-
         }
     }
 

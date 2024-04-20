@@ -7,6 +7,19 @@
 
       &--mb30{
         margin-bottom: 30px;
+        @media @bw1020 {
+          margin-bottom: -2px;
+        }
+      }
+      @media @bw1020 {
+        max-width: 191px;
+        font-size: 16px;
+        &--mw100{
+          max-width: 100%;
+        }
+      }
+      @media @bw700 {
+        font-size: 16px;
       }
     }
 
@@ -15,7 +28,7 @@
       flex-direction: column;
       align-items: center;
       width: 100%;
-      min-width: 780px;
+      max-width: 780px;
     }
     &__scheme-wrapper {
       position: relative;
@@ -40,6 +53,9 @@
       &:last-child{
         margin-bottom: 0;
       }
+      @media @bw1020 {
+        margin-bottom: 15px;
+      }
     }
 
     &__scheme-title{
@@ -50,6 +66,13 @@
       font-weight: 600;
       font-size: 16px;
       line-height: 22px;
+      @media @bw1020 {
+        font-size: 11px;
+        padding: 6px 47px;
+      }
+      @media @bw700 {
+        font-size: 11px;
+      }
     }
 
     &__tickets {
@@ -81,6 +104,10 @@
         font-weight: 400;
         line-height: normal;
         margin-bottom: 22px;
+        @media @bw700 {
+          gap: 10px;
+          margin-bottom: 25px;
+        }
       }
       &__total {
         font-size: 20px;
@@ -98,6 +125,9 @@
           margin-left: 4px;
           font-size: 0.95em;
         }
+        @media @bw700 {
+          margin-bottom: 40px;
+        }
       }
       &__button{
         text-align: center;
@@ -109,6 +139,7 @@
         border: none;
         color: @white;
         transition: background-color 0.2s;
+        margin-bottom: 0;
         &:active{
             background-color: @red_dark;
         }
@@ -124,6 +155,12 @@
         flex-direction: column;
         align-items: flex-end;
         margin-bottom: 35px;
+        @media @bw1020 {
+          margin-bottom: 37px;
+        }
+        @media @bw700 {
+          align-items: flex-start;
+        }
         
       }
       &__price-item{
@@ -168,6 +205,9 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        @media @bw700 {
+          align-items: flex-start;
+        }
       }
 
       &__note{
@@ -180,6 +220,9 @@
         padding-left: 54px;
         font-size: 14px;
         line-height: 19px;
+        @media @bw1020 {
+          margin-bottom: 20px;
+        }
 
         &--free{
           &::before,
