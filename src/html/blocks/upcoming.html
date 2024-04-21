@@ -1,0 +1,102 @@
+<section class="upcoming @@class">
+  <div class="near-events__fon">
+    <div class="upcoming__wrapper">
+      <div class="near-events__container">
+        <h2 class="near-events__section-title section-title">Мероприятия</h2>
+        <div class="upcoming__swiper swiper swiper--3s js-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- prettier-ignore -->
+              @@include('event-card.html', {
+                "class": "listing__event-card",
+                "img": "assets/images/Nirvana.svg",
+                "alt": "Theatre Photosession",
+                "title": "Собираемся и слушаем альбом Nirvana. Nirvana",
+                "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
+                "time": "26.11.2021",
+                "datetime": "2021-11-26T00:00"
+              })
+            </div>
+            <!-- Здесь добавьте еще хотя бы три слайда по аналогии -->
+            <div class="swiper-slide">
+                <!-- prettier-ignore -->
+                @@include('event-card.html', {
+                  "class": "listing__event-card",
+                  "img": "assets/images/Stuff.png",
+                  "alt": "Theatre Photosession",
+                  "title": "Есть тема, нужно обсудить с HowStuffWorks",
+                  "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи: от игрушек до водяных дамб.",
+                  "time": "26.11.2021",
+                  "datetime": "2021-11-26T00:00"
+                })
+              </div>
+              <div class="swiper-slide">
+                <!-- prettier-ignore -->
+                @@include('event-card.html', {
+                  "class": "listing__event-card",
+                  "img": "assets/images/Sade.png",
+                  "alt": "Theatre Photosession",
+                  "title": "Вечер | The Best of Sade",
+                  "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-н-блюза, фанка и софт-рока.",
+                  "time": "26.11.2021",
+                  "datetime": "2021-11-26T00:00"
+                })
+              </div>
+              <div class="swiper-slide">
+                <!-- prettier-ignore -->
+                @@include('event-card.html', {
+                  "class": "listing__event-card",
+                  "img": "assets/images/Mal.png",
+                  "alt": "malevich",
+                  "title": "Выставка Малевича в Томске",
+                  "descr": "Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.",
+                  "time": "23.12.2022 | начало 20.00",
+                  "datetime": "2022-12-23T20:00"
+                })
+              </div>
+              <div class="swiper-slide">
+                <!-- prettier-ignore -->
+                @@include('event-card.html', {
+                  "class": "listing__event-card",
+                  "img": "assets/images/Tat.png",
+                  "alt": "tat",
+                  "title": "Мастер — класс по студийной съемке от Tatler",
+                  "descr": "Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.",
+                  "time": "25.12.2022 | начало 13.00",
+                  "datetime": "2022-12-25T13:00"
+                })
+              </div>
+              <div class="swiper-slide">
+                <!-- prettier-ignore -->
+                @@include('event-card.html', {
+                  "class": "listing__event-card",
+                  "img": "assets/images/hatt.png",
+                  "alt": "concert",
+                  "title": "Повесилимся на славу на концерте The Hatters",
+                  "descr": "Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко",
+                  "time": "27.12.2022 | начало 10.00",
+                  "datetime": "2022-12-27T10:00"
+                })
+              </div>
+          </div>
+          <footer class="swiper-footer near-events__scroll">
+            <button type="button" class="near-events__icons1 link swiper-arrow-prev arrow arrow--left">
+              <svg class="link__icon" width="92" height="62">
+                <use xlink:href="assets/icons/symbols.svg#link-reverse"></use>
+              </svg>
+            </button>
+            <div class="swiper-pagination"></div>
+            <button type="button" class=" near-events__icons1 link swiper-arrow-next arrow ">
+              <svg class="link__icon" width="92" height="62">
+                <use xlink:href="assets/icons/symbols.svg#link"></use>
+              </svg>
+            </button>
+          </footer>
+        </div>
+        <div class="listing__links">
+          <a href="#" class="listing__link listing__link--mt25 link">Смотреть все</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>

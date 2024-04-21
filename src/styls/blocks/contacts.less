@@ -40,8 +40,16 @@
         
     }
     &__map{
-        @media @bw960 {
+        max-width: 752px;
+        min-height: 493px;
+        @media @bw1020 {
+            max-width: 708px;
+            min-height: 463px;
             order: 1;
+        }
+        @media @bw768 {
+            max-width: 280px;
+            min-height: 176px;
         }
     }
 

@@ -24,6 +24,9 @@
     &__events-list{
         display: flex;
         flex-wrap: wrap;
+        @media @bw1020 {
+            max-width: 280px;
+        }
         //margin: 0 -30px -120px;
     }
     &__event-card{
@@ -36,6 +39,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 70px;
+        min-height: 60px;
         
     }
     &__icons2{
