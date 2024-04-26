@@ -7,6 +7,15 @@
     @media @bw1020 {
         max-width: 388px;
     }
+
+    label.error,
+    span.error {
+        display: block;
+        margin: 5px 0 0 ;
+        color: red;
+        position: absolute;
+        bottom: -25px;
+    }
     &__title{
         margin: 0 0 24px;
         font-weight: 600;
@@ -25,17 +34,16 @@
     &__wrapper{
         display: flex;
         height: 49px;
+        position: relative;
         margin-bottom: 15px;
         @media @bw500 {
             position: absolute;
             right: 0;
             left: 0;
             height: 46px;
-
-
         }
-
     }
+
     &__input{
         width: 100%;
         border: none;

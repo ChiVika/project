@@ -337,7 +337,9 @@
       $.each(dateField, function (i) {
         pickerInit($(this));
       });
-}
+    }
+
+    
 
 })();
 

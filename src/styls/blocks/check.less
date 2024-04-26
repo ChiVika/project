@@ -3,6 +3,16 @@
     position: relative;
     padding-left: 40px;
     display: block;
+
+    label.error,
+    span.error {
+      display: block;
+      margin: 5px 0 0;
+      color: red;
+      position: absolute;
+      bottom: -20px;
+        
+    }
     &__input{
         .is-hidden;
         &:checked{
@@ -19,10 +29,8 @@
                     border-bottom: 2px solid @white;
                     border-right: 2px solid @white;
                     transform: rotate(45deg);
-
                 }
             }
-
         }
     }
     &__mark{
@@ -45,6 +53,7 @@
         font-weight: 300;
         font-family: @font1;
         color: @black;
+        margin-bottom: 5px;
         @media @bw700 {
           font-size: 14px;
           font-weight: 400;
