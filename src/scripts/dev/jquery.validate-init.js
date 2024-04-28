@@ -56,7 +56,7 @@
       subForm.validate({
         errorElement: "span",
         submitHandler: function (form, event) {
-          event.preventDefault(); //предотвращение действия по умолчанию
+          event.preventDefault();
           $.ajax({
             url: subAction,
             method: "POST",
@@ -67,13 +67,20 @@
               subEmail.val("");
               subEmail.blur();
               alert("Вы успешно подписались на рассылку новостей");
+              $("#js-wrapper").css("margin-bottom", "");
             },
             error: function () {
               alert("Что-то пошло не так, попробуйте еще раз");
             }
           });
-        }
-      })
+        },
+        invalidHandler: function() {
+          $("#js-wrapper").css("margin-bottom", "35px");
+        },
+        success: function(label) {
+          label.closest('.sub__wrapper').css("margin-bottom", "15px");
+        },
+      });
     }
     $(".validate").validate({
       errorPlacement: function(error, element) {
@@ -84,16 +91,11 @@
         }
       }
     });
-    document.getElementById('js-SubButton').addEventListener('click', function(event) {
-      event.preventDefault(); // Отменяем стандартное поведение кнопки submit
-  
-      var emailInput = document.getElementById('js-SubEmail');
-      var subWrapper = document.querySelector('.sub__wrapper');
-  
-      if (emailInput.checkValidity() && emailInput.value === '') { // Проверяем, пустое ли поле email
-          var currentMargin = parseInt(window.getComputedStyle(subWrapper).marginBottom);
-          subWrapper.style.marginBottom = (currentMargin + 10) + 'px';
-      }
-    });
+
+
+    
+
+
+    
           
   })();

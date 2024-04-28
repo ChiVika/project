@@ -6,6 +6,7 @@
     root.classList.toggle("show-nav");
     });
 
+
     //открытие и закрытие popup
     const eventPP = document.querySelector("#js-eventPP"); //ищем
     const eventOpen = document.querySelector("#js-eventOpenBtn")
@@ -338,6 +339,107 @@
         pickerInit($(this));
       });
     }
+
+    const checkboxes = document.querySelectorAll('.check__input');
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener('click', (event) => {
+        const tableNumber = event.target.dataset.table;
+        const tableElement = document.querySelector(`.scene__table[data-table="${tableNumber}"]`);
+        const tableNumberSvg = document.querySelector(`.scene__table-num[data-table="${tableNumber}"]`);
+        
+        if(checkbox.checked){
+          if(tableElement.classList.contains('scene__table--red')){
+            console.log("Ура красный");
+            tableElement.setAttribute('fill','#A51505');
+            tableNumberSvg.setAttribute('fill',"#ffffff");
+          }
+          else{
+            console.log("Ура черный");
+            tableElement.setAttribute('fill','#1F1E1E');
+            tableNumberSvg.setAttribute('fill',"#ffffff");
+          }
+          
+        }
+        else{
+          if(tableElement.classList.contains('scene__table--red')){
+            console.log("Не ура");
+            tableElement.setAttribute('fill','transparent');
+            tableNumberSvg.setAttribute('fill',"#BC3324");
+          }
+          else{
+            console.log("Не ура");
+            tableElement.setAttribute('fill','transparent');
+            tableNumberSvg.setAttribute('fill',"#1F1E1E");
+
+          }
+        }
+      })
+      if (checkbox.disabled) {
+        const tableNumber = checkbox.dataset.table;
+        const tableElement = document.querySelector(`.scene__table[data-table="${tableNumber}"]`);
+        const tableNumberSvg = document.querySelector(`.scene__table-num[data-table="${tableNumber}"]`);
+        const groupElements = document.querySelectorAll('.group');
+        tableElement.setAttribute('fill','#BFBFBF');
+        tableNumberSvg.setAttribute('fill',"#A51505");
+        groupElements.forEach((group) => {
+          group.setAttribute('stroke',"#BFBFBF");
+        });
+      }
+    })
+
+    const svgTables = document.querySelectorAll('.scene__table');
+
+    svgTables.forEach((svgTable) => {
+      svgTable.addEventListener('click', (event) => {
+        const tableNumber = svgTable.dataset.table;
+        const checkbox = document.querySelector(`.check__input[data-table="${tableNumber}"]`);
+        checkbox.click();
+      });
+    });
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener('click', (event) => {
+        const tableNumber = event.target.dataset.table;
+        const tableElement = document.querySelector(`.scene__table[data-table="${tableNumber}"]`);
+        const tableNumberSvg = document.querySelector(`.scene__table-num[data-table="${tableNumber}"]`);
+
+        if (checkbox.checked) {
+          if (tableElement.classList.contains('scene__table--red')) {
+            console.log("Ура красный");
+            tableElement.setAttribute('fill', '#A51505');
+            tableNumberSvg.setAttribute('fill', "#ffffff");
+          } else {
+            console.log("Ура черный");
+            tableElement.setAttribute('fill', '#1F1E1E');
+            tableNumberSvg.setAttribute('fill', "#ffffff");
+          }
+        } else {
+          if (tableElement.classList.contains('scene__table--red')) {
+            console.log("Не ура");
+            tableElement.setAttribute('fill', 'transparent');
+            tableNumberSvg.setAttribute('fill', "#BC3324");
+          } else {
+            console.log("Не ура");
+            tableElement.setAttribute('fill', 'transparent');
+            tableNumberSvg.setAttribute('fill', "#1F1E1E");
+          }
+        }
+      });
+
+      if (checkbox.disabled) {
+        const tableNumber = checkbox.dataset.table;
+        const tableElement = document.querySelector(`.scene__table[data-table="${tableNumber}"]`);
+        const tableNumberSvg = document.querySelector(`.scene__table-num[data-table="${tableNumber}"]`);
+        const groupElements = document.querySelectorAll('.group');
+        tableElement.setAttribute('fill', '#BFBFBF');
+        tableNumberSvg.setAttribute('fill', "#A51505");
+        groupElements.forEach((group) => {
+          group.setAttribute('stroke', "#BFBFBF");
+        });
+      }
+    });
+
+    
 
     
 
