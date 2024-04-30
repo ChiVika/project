@@ -40,10 +40,21 @@
         margin-right: auto;
         margin-top: 70px;
         min-height: 60px;
+        border: none;
+        @media @bw1660 {
+            max-width: 474px;
+        }
+        @media @bw960 {
+            max-width: 300px;
+        }
+        @media @bw700 {
+            max-width: 280px;
+        }
         
     }
     &__icons2{
         display: flex;
         align-self: center;
+        border: none;
     }
 }

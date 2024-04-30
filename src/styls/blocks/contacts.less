@@ -17,16 +17,18 @@
         gap: 67px;
         @media @bw1660 {
             gap: 52px;
+            
         }
         @media @bw960 {
             order: 2;
             flex-direction: row;
-            gap: 114px;
-            &:first-child{
-                margin-left: 64px;
+            gap: 60px;
+            justify-content: center;
+            &:nth-child(2){
+                max-width: 185px;
             }
             &:last-child{
-                margin-left: -20px;
+                max-width: 195px;
             }
 
 
@@ -44,12 +46,12 @@
         max-width: 752px;
         min-height: 493px;
         @media @bw1020 {
-            max-width: 708px;
+            width: 100%;
+            margin: 0 auto;
             min-height: 463px;
             order: 1;
         }
-        @media @bw768 {
-            max-width: 280px;
+        @media @bw600 {
             min-height: 176px;
         }
     }

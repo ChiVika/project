@@ -341,22 +341,51 @@
     }
 
     const checkboxes = document.querySelectorAll('.check__input');
+    const prices = document.querySelectorAll('.reserve__qty');
+    const total = document.querySelector('.reserve__total');
+    const sumElements = document.querySelectorAll('.reserve__sum');
+
+    let totalSum1 = 0;
+    let totalSum2 = 0;
+
+    let totals;
+    
+    
     checkboxes.forEach((checkbox) => {
+
       checkbox.addEventListener('click', (event) => {
         const tableNumber = event.target.dataset.table;
+        const priceTableNumber = event.target.dataset.number;
+        const priceElement = prices[priceTableNumber - 1];
+        const priceTable = priceElement.dataset.price;
         const tableElement = document.querySelector(`.scene__table[data-table="${tableNumber}"]`);
         const tableNumberSvg = document.querySelector(`.scene__table-num[data-table="${tableNumber}"]`);
-        
+
+
+        const qtyElement = document.querySelector(`.reserve__qty[data-number="${priceTableNumber}"]`);
+        const sumElement = qtyElement.nextElementSibling;
+
         if(checkbox.checked){
           if(tableElement.classList.contains('scene__table--red')){
             console.log("Ура красный");
             tableElement.setAttribute('fill','#A51505');
             tableNumberSvg.setAttribute('fill',"#ffffff");
+            qtyElement.textContent = parseInt(qtyElement.textContent) + 1;
+            sumElement.textContent = parseInt(qtyElement.textContent) * priceTable;
+            console.log("Значение Sumel",sumElement.textContent);
+            totalSum1 = parseInt(sumElement.textContent);
+            console.log(totalSum1);
+
           }
           else{
             console.log("Ура черный");
             tableElement.setAttribute('fill','#1F1E1E');
             tableNumberSvg.setAttribute('fill',"#ffffff");
+            qtyElement.textContent = parseInt(qtyElement.textContent) + 1;
+            sumElement.textContent = parseInt(qtyElement.textContent) * priceTable;
+            console.log("Значение Sume2",sumElement.textContent);
+            totalSum2 = parseInt(sumElement.textContent);
+            console.log(totalSum2);
           }
           
         }
@@ -365,14 +394,22 @@
             console.log("Не ура");
             tableElement.setAttribute('fill','transparent');
             tableNumberSvg.setAttribute('fill',"#BC3324");
+            qtyElement.textContent = Math.max(parseInt(qtyElement.textContent) - 1, 0);
+            sumElement.textContent = parseInt(qtyElement.textContent) * priceTable;
+            totalSum1 = parseInt(sumElement.textContent);
+            console.log("Значение Sumel",sumElement.textContent);
           }
           else{
             console.log("Не ура");
             tableElement.setAttribute('fill','transparent');
             tableNumberSvg.setAttribute('fill',"#1F1E1E");
-
+            qtyElement.textContent = Math.max(parseInt(qtyElement.textContent) - 1, 0);
+            sumElement.textContent = parseInt(qtyElement.textContent) * priceTable;
+            totalSum2 = parseInt(sumElement.textContent);
+            console.log("Значение Sume2",sumElement.textContent);
           }
         }
+        total.textContent = totalSum1 + totalSum2;
       })
       if (checkbox.disabled) {
         const tableNumber = checkbox.dataset.table;
@@ -438,6 +475,11 @@
         });
       }
     });
+
+    
+
+
+
 
     
 
