@@ -30,13 +30,22 @@
             &:last-child{
                 max-width: 195px;
             }
-
-
+        }
+        @media @bw700 {
+            flex-direction: column;
+            gap: 41px;
+            
         }
         &:first-child{
             margin-top: 15px;
             @media @bw1660{
                 margin-top: 30px;
+            }
+            @media @bw960 {
+                margin-top: 100px;
+            }
+            @media @bw700 {
+                margin-top: 59px;
             }
         }
         
